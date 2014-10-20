@@ -8,19 +8,42 @@
  * 
  * For guidance, refer to the flowchart PizzaPalace.pdf distributed with this file
  * 
- * @author <change to your name>
- * @version <today's date>
+ * @author <Alexander Ferragamo>
  */
-public class PizzaPalace {
+import java.util.Scanner;
 
-	public static void main(String[] args) {
-		// TODO Replace this section with your own code
-		
-		// NOTE
-		// The Math class provides a function, ceiling(), which will take a double
-		// and return the next higher integer value.
-		// For example, Math.ceiling(4.125) would evaluate to 5
+public class PizzaPalace{
 
-	}
-
-}
+   public static void main(String[] args){
+      Scanner scnr = new Scanner(System.in);
+      double totalPizzas = 0;
+      
+      System.out.println("This is a code used to figur out how may pizzas are needed depending on how many people there are.");
+      System.out.println("First you need to tell me how many people will be at your club.");
+      double numPeople = scnr.nextDouble();
+         if (numPeople >= 20){
+         System.out.println("Wow! that is a lot of people.");
+         } else if (numPeople >= 10){
+         System.out.println("Thats is a good amount of people!");
+         } else if (numPeople < 10){
+         System.out.println("Wow! That is not a lot of people.");
+         }
+      System.out.println("Now you need to tell me how many slices of pizza each person will have.");
+      double numSlices = scnr.nextDouble();
+         if (numSlices >= 5){
+         System.out.println("Wow, these people are really hungry");
+         } else if (numSlices >= 3){
+         System.out.println("That seems like a good amount of pizza per person.");
+         } else if (numSlices <= 2){
+         System.out.println("Wow, these people are not very hungry.");
+         }
+      System.out.println("Now you need to tell me how many slices are in each pizza.");
+      int numPer = scnr.nextInt();
+      totalPizzas = (numPeople * numSlices) / numPer;
+      totalPizzas = Math.ceil(totalPizzas);
+      System.out.println("You need "+totalPizzas +" pizzas."); 
+      
+      
+      }
+      
+ }

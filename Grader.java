@@ -20,13 +20,29 @@
 *  >-100
 *  "Thank you -- have a great day!"
 *  
-*/
+*///by Alexander Ferragamo
 
-public class Grader {
-  
-  public static void main(String[] args) {
-    //TODO insert your code here
-  }
-  
-  
-}
+import java.util.Scanner;
+
+public class Grader{
+
+   public static void main(String[] args){
+      Scanner scnr = new Scanner(System.in);
+      double num3 = 0;
+      double num2 = 0;
+
+      System.out.println("Hello, This program is created to tell you your grade on a quiz or test.");
+      System.out.println("Any time you would like to quit imput any negivitve number.");
+      System.out.println("Please type in the over all points of the test or quiz.");
+      double num1 = scnr.nextDouble();
+      while (num2 >= 0){
+      System.out.println("Enter the number of points taken off");
+      num2 = scnr.nextDouble();
+      num3 = (num1 - num2) / num1;
+      if (num2 >= 0){
+      System.out.println("Getting "+num2 +" points off the quiz gives you a score of "+num3 +"%");
+      }
+      }
+      System.out.println("Thank you, Have a nice day");
+      }
+      }
